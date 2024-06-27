@@ -7,6 +7,7 @@ import { TemplateListComponent } from './components/template-list/template-list.
 import { AddTemplateComponent } from './components/add-template/add-template.component';
 import { EditTemplateComponent } from './components/edit-template/edit-template.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
 
   ],
   providers: [],

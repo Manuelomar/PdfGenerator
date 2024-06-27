@@ -1,1 +1,43 @@
-<p>add-template works!</p>
+<div class="container my-5">
+    <h1 class="mb-2" style="display: flex; justify-content: center;">Agregar Plantilla</h1>
+    <div class="row" style="display: flex; justify-content: center;">
+      <div class="col-8">
+        <form #form="ngForm" (ngSubmit)="addTemplate()">
+  
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" placeholder="Nombre" name="name" [(ngModel)]="addTemplateRequest.name">
+          </div>
+  
+          <div class="mb-3" *ngFor="let field of addTemplateRequest.fields; let i = index">
+            <label for="destinationName" class="form-label">Nombre del Destino</label>
+            <input type="text" class="form-control" id="destinationName" placeholder="Nombre del Destino" name="destinationName" [(ngModel)]="field.destinationName">
+  
+            <label for="skills" class="form-label">Habilidades</label>
+            <input type="text" class="form-control" id="skills" placeholder="Habilidades" name="skills" [(ngModel)]="field.skills">
+  
+            <label for="relevantAreas" class="form-label">Áreas Relevantes</label>
+            <input type="text" class="form-control" id="relevantAreas" placeholder="Áreas Relevantes" name="relevantAreas" [(ngModel)]="field.relevantAreas">
+  
+            <label for="from" class="form-label">De</label>
+            <input type="text" class="form-control" id="from" placeholder="De" name="from" [(ngModel)]="field.from">
+  
+            <label for="desiredPosition" class="form-label">Posición Deseada</label>
+            <input type="text" class="form-control" id="desiredPosition" placeholder="Posición Deseada" name="desiredPosition" [(ngModel)]="field.desiredPosition">
+  
+            <label for="createdDate" class="form-label">Fecha de Creación</label>
+            <input type="datetime-local" class="form-control" id="createdDate" placeholder="Fecha de Creación" name="createdDate" [(ngModel)]="field.createdDate">
+          </div>
+  
+          <div class="button-container">
+            <button type="submit" class="btn btn-primary">Agregar</button>
+            <button type="button" class="btn btn-danger">
+              <a class="nav-link text-white" routerLink="/">Cancelar</a>
+            </button>
+          </div>
+  
+        </form>
+      </div>
+    </div>
+  </div>
+  
