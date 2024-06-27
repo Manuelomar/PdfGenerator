@@ -1,0 +1,46 @@
+<div class="container mt-4">
+    <h1 class="title">Templates</h1>
+    <div class="container-button">
+
+
+        <button type="button" class="btn btn-primary" style="height: 40px;"><a class="nav-link " aria-current="page"
+                routerLink="template/add">Agregar</a></button>
+       
+    </div>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let template of templates">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ template.name }}</h5>
+
+                    <div *ngFor="let field of template.fields">
+                        <div class="image-container">
+
+                            <img src="assets/img/pdf.png" alt="PDF Icon" class="img-fluid">
+
+
+                        </div>
+                        <div class="button-pdf-container">
+
+                            <button type="button" class="btn btn-success" style="height: 40px;">
+                                <a class="nav-link text-white" aria-current="page"
+                                    [routerLink]="['/template/edit', template.id]">Editar</a>
+                            </button>
+                            <button type="button" class="btn btn-danger pdf-button" style="height: 40px;" (click)="downloadPdf(template.id)">
+                                Descargar
+                              </button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="totalPages > 1" class="mt-3">
+        <nav>
+
+        </nav>
+        <p>Total Records: {{ totalRecords }}</p>
+    </div>
+</div>

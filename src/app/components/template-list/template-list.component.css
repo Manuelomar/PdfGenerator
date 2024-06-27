@@ -1,0 +1,85 @@
+.btn-dark{
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+}
+.container-button{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.card {
+    margin-bottom: 20px;
+    background: linear-gradient(40deg, rgb(255, 255, 255), rgb(202, 20, 20));
+    border: #dc3545 5px solid;
+    border-radius: 20px;
+
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .card-subtitle {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .img-fluid{
+        width: 70%;
+    }
+    .image-container{
+        display: flex;
+        justify-content: center;
+
+    }
+  }
+
+
+body {
+    font-family: 'Calibri', 'Arial', sans-serif;
+  }
+  
+  .title {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    color: #4a4a4a; 
+    text-align: center; 
+    margin: 20px 0; 
+    padding: 10px; 
+    background: #f8f9fa; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  .container-button{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 1rem;
+  }
+  .button-pdf-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    gap: 1rem;
+
+
+      .pdf-button{
+       
+    
+      }
+  }
